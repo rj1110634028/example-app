@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $dateFormat = 'U';
+    
+    protected $fillable = ['name','address','description'];
+
     public function store()
     {
         return $this->belongsTo(Store::class, 'storeId', 'id');
