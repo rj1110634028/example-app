@@ -18,7 +18,7 @@ class StoreFactory extends Factory
     {
         return [
             'name' => $this->faker->company(),
-            'address' => $this->faker->address(),
+            'address' => $this->faker->unique()->address(),
             'description' => $this->faker->realTextBetween(50, 100),
         ];
     }

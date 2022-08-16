@@ -17,7 +17,10 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->word(),
+            'price' => $this->faker->randomNumber(4, false),
+            'description' => $this->faker->realTextBetween(50, 100),
+            'storeId' => \App\Models\Store::all('id')->random()->id
         ];
     }
 }
