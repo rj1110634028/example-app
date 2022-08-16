@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ProductController;
  
 
 /*
@@ -21,3 +23,5 @@ Route::get('/test/{name}/with/{msg}', function (Request $request, $n, $m) {
 });
 
 Route::resource('test', TestController::class);
+Route::resource('store', StoreController::class);
+Route::resource('product', ProductController::class);
